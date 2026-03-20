@@ -32,6 +32,10 @@ Your last 5 generated emails are saved in the sidebar so you can always refer ba
 
 ---
 
+## Architecture Diagram
+<img width="1400"  alt="image" src="https://github.com/user-attachments/assets/9b12dc09-766b-4a44-991e-5d3a48293014" />
+
+
 ## Features
 
 - 📄 **Resume upload** — AI reads your actual experience to personalise every email
