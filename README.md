@@ -14,18 +14,20 @@ Most cold emails fail because they're generic. Hiring managers can tell when som
 
 ## How It Works
 
-![Main Interface](imgs/image.png)
+<img width="700" alt="Main Interface" src="https://github.com/user-attachments/assets/0e440c5f-47ee-4c0f-adf3-64dae1c7c144" />
+
 
 1. **Upload your resume** — the AI reads your actual skills, experience, and achievements
 2. **Paste a careers page URL** — the app scrapes the job listing and extracts the role requirements
 3. **Choose a tone** — Professional, Friendly, Confident, or Concise
 4. **Generate** — the AI matches your experience to their needs and writes the email
 
-![Generated Email](imgs/image-1.png)
+<img width="700" alt="Generated Email" src="https://github.com/user-attachments/assets/1cc701c2-e0f4-4e49-8328-956a5a720e92" />
+
 
 Your last 5 generated emails are saved in the sidebar so you can always refer back to a previous version.
 
-![Email History]<img width="597" height="1011" alt="image" src="https://github.com/user-attachments/assets/f951bce5-6dac-461e-8a1c-c8b7c203dcd7" />
+<img width="400"  alt="Email History" src="https://github.com/user-attachments/assets/f951bce5-6dac-461e-8a1c-c8b7c203dcd7" />
 
 
 ---
