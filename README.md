@@ -1,32 +1,89 @@
-# 📧 Cold Mail Generator
-Cold email generator for services company using groq, langchain and streamlit. It allows users to input the URL of a company's careers page. The tool then extracts job listings from that page and generates personalized cold emails. These emails include relevant portfolio links sourced from a vector database, based on the specific job descriptions. 
+# 📧 Cold Email Generator
 
-**Imagine a scenario:**
+Job hunting is time-consuming. Writing personalised cold emails for every application is even more so. This tool solves that.
 
-- Nike needs a Principal Software Engineer and is spending time and resources in the hiring process, on boarding, training etc
-- Atliq is Software Development company can provide a dedicated software development engineer to Nike. So, the business development executive (Mohan) from Atliq is going to reach out to Nike via a cold email.
+Paste a company's careers page URL, upload your resume, and the app uses AI to read the job listing, match it to your actual experience and projects, and generate a tailored cold email ready to send — in seconds.
 
-![img.png](imgs/img.png)
+---
 
-## Architecture Diagram
-![img.png](imgs/architecture.png)
+## The Problem It Solves
 
-## Set-up
-1. To get started we first need to get an API_KEY from here: https://console.groq.com/keys. Inside `app/.env` update the value of `GROQ_API_KEY` with the API_KEY you created. 
+Most cold emails fail because they're generic. Hiring managers can tell when someone has copy-pasted the same email to 50 companies. This tool reads the actual job requirements and your real experience to write an email that speaks directly to what that specific company needs.
 
+---
 
-2. To get started, first install the dependencies using:
-    ```commandline
-     pip install -r requirements.txt
-    ```
-   
-3. Run the streamlit app:
-   ```commandline
-   streamlit run app/main.py
-   ```
-   
+## How It Works
 
-Copyright (C) Codebasics Inc. All rights reserved.
+![Main Interface](imgs/image.png)
 
-**Additional Terms:**
-This software is licensed under the MIT License. However, commercial use of this software is strictly prohibited without prior written permission from the author. Attribution must be given in all copies or substantial portions of the software.
+1. **Upload your resume** — the AI reads your actual skills, experience, and achievements
+2. **Paste a careers page URL** — the app scrapes the job listing and extracts the role requirements
+3. **Choose a tone** — Professional, Friendly, Confident, or Concise
+4. **Generate** — the AI matches your experience to their needs and writes the email
+
+![Generated Email](imgs/image-1.png)
+
+Your last 5 generated emails are saved in the sidebar so you can always refer back to a previous version.
+
+![Email History](imgs/image-2.png)
+
+---
+
+## Features
+
+- 📄 **Resume upload** — AI reads your actual experience to personalise every email
+- 🎯 **Smart job scraping** — extracts role, skills and requirements from careers pages
+- 💼 **Portfolio matching** — links your most relevant projects to the job requirements
+- 🎨 **Tone selector** — choose between Professional, Friendly, Confident, or Concise
+- 📋 **Email history** — last 5 generated emails saved in session for easy reference
+- 🗑️ **Portfolio cache reset** — update your portfolio and refresh with one click
+
+---
+
+## Tech Stack
+
+| Tool | What it does |
+|---|---|
+| **LLaMA 3.3 70B via Groq** | The AI model that reads the job listing and writes the email |
+| **LangChain** | Connects the AI model to the app and structures the prompts |
+| **ChromaDB** | Stores your portfolio projects and matches them to job requirements |
+| **Streamlit** | The web interface you interact with |
+| **pdfplumber** | Extracts text from your uploaded resume PDF |
+| **Python** | The programming language everything is built in |
+
+---
+
+## Setup
+
+1. Clone the repo
+2. Install dependencies:
+```bash
+pip install langchain langchain-community langchain-groq chromadb streamlit python-dotenv pdfplumber
+```
+3. Create a `.env` file in the root folder:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+4. Update `app/resource/my_portfolio.csv` with your own projects and GitHub links
+5. Run the app:
+```bash
+streamlit run app/main.py
+```
+
+---
+
+## Usage
+
+1. Upload your resume as a PDF
+2. Paste a direct company careers page URL
+3. Select your preferred email tone
+4. Click **Generate Email**
+5. Copy and send!
+
+---
+
+## Important Notes
+
+- Use direct company careers page URLs only (e.g. `careers.google.com`)
+- Job boards like LinkedIn, Seek, or Ashby are not supported
+- Your `.env` file is gitignored — never share your API key publicly
