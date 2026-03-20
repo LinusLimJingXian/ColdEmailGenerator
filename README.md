@@ -25,7 +25,8 @@ Most cold emails fail because they're generic. Hiring managers can tell when som
 
 Your last 5 generated emails are saved in the sidebar so you can always refer back to a previous version.
 
-![Email History](imgs/image-2.png)
+![Email History]<img width="597" height="1011" alt="image" src="https://github.com/user-attachments/assets/f951bce5-6dac-461e-8a1c-c8b7c203dcd7" />
+
 
 ---
 
